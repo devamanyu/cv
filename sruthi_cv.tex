@@ -1,0 +1,262 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[a4paper, margin=0.9in, top=1in]{geometry}
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+% \usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+% \usepackage{supertabular} 				%for Grades
+% \usepackage{titlesec}					%custom \section
+
+% mobile phone symbol
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{multirow}
+% \newcommand*\faMobile{{\FA\symbol{"F10B}}}
+% \usepackage[misc]{ifsym}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+% \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+% \titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+% \hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+% \usepackage[absolute]{textpos}
+
+% \setlength{\TPHorizModule}{30mm}
+% \setlength{\TPVertModule}{\TPHorizModule}
+% \textblockorigin{2mm}{0.65\paperheight}
+% \setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Sruthi \textsc{Gorantla}\bigskip\\\small Research Assistant, Computer Science and Automation, IISc Bangalore\\\normalsize \faMobile{ +91 9700606402}\ \ \Letter{ \href{mailto:gorantla.sruthi@gmail.com}{gorantla.sruthi@gmail.com}\ \ \Letter{ \href{mailto:gorantlas@iisc.ac.in}{gorantlas@iisc.ac.in}}}
+	}\rule{\textwidth}{0.75pt}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+% \section{Personal Data}
+
+% \begin{tabular}{rl}
+%     \textsc{Place and Date of Birth:} & India  | 20 Feb 1996 \\
+%     \textsc{Address:}   & CV Inn 19, 20301, Milano, Italy \\
+%     \textsc{Phone:}     & +39 123 456789\\
+%     \textsc{email:}     & \href{mailto:alessandro.plasmati@gmail.com}{alessandro.plasmati@gmail.com}
+% \end{tabular}
+\bigskip
+\begin{tabularx}{\textwidth}{r|X}
+
+\multicolumn{2}{l}{\LARGE{\textsc{Education}}}\\[2ex]
+
+ \textsc{July} 2019 & Master of Technology in \textsc{Computer Science and Automation}\hfill \textsc{Gpa}: 8.33/10\\
+India&  \textbf{Indian Institute of Science}, Bangalore\\
+& Thesis: ``Capsule Networks and Biologically Plausible Neural Networks on MNIST'' \\ 
+& Advisor: Dr. Anand \textsc{Louis} \hfill Thesis grade point: \textsc{9/10}\\
+\multicolumn{2}{c}{} \\
+\textsc{July} 2017& Bachelor of Technology in \textsc{Computer Science and Engineering}\hfill \textsc{Gpa}: 8.52/10\\India&\textbf{National Institute of Technology}, Warangal\\
+& Final Year Project: ``A Polynomial Algorithm for the Secure Domination Number in Series-Parallel Graphs'' \\ 
+& Advisor: Dr. PV Subba Reddy \hfill Project grade point: \textsc{9/10}\\
+\multicolumn{2}{c}{} \\
+\multicolumn{2}{c}{}\\
+\hline
+\multicolumn{2}{c}{} \\
+
+
+
+
+
+
+
+
+
+\multicolumn{2}{l}{\LARGE{\textsc{Research Areas}}}\\[2ex]
+
+\textsc{Present}& Fairness and Bias in Machine Learning \\[1ex]
+& Biologically Plausible Neural Network Training Algorithms \\
+\multicolumn{2}{c}{} \\
+\textsc{Past} & Object Pose Estimation using Capsule Networks\\[1ex]
+& Clinical Data Predictions using Deep Neural Networks\\[1ex]
+& Sentiment Analysis and Emotion Recognition in Text Data\\
+\multicolumn{2}{c}{} \\
+\multicolumn{2}{c}{}\\
+\hline
+\multicolumn{2}{c}{} \\
+
+
+
+
+
+
+
+
+
+\multicolumn{2}{l}{\LARGE{\textsc{Publications}}}\\[2ex]
+\textsc{2019} &\multirow{5}{=}{Sruthi Gorantla, Anand Louis, Christos H. Papadimitriou, Santosh Vempala, Naganand Yadati, \textbf{Biologically Plausible Neural Networks via Evolutionary Dynamics and Dopaminergic Plasticity}. \textit{Workshop on \textsc{Real Neurons and Hidden Units}, Advances in Neural Information Processing Systems (NeurIPS) 2019}. See~\href{https://openreview.net/pdf?id=B1eh4mYIUB}{openreview.net/pdf?id=B1eh4mYIUB}.}\\
+Vancouver & \\
+Canada &\\
+&\\
+&\\
+\multicolumn{2}{c}{} \\
+\textsc{2018} &\multirow{4}{=}{Devamanyu Hazarika, Soujanya Poria, Sruthi Gorantla, Erik Cambria, Roger Zimmermann, Rada Mihalcea, \textbf{CASCADE: Contextual Sarcasm Detection in Online Discussion Forums}. \textit{Proceedings of the 27\textsc{th} International Conference on Computational Linguistics (COLING) 2018}. See~\href{https://www.aclweb.org/anthology/C18-1156}{aclweb.org/anthology/C18-1156}.}\\
+New Mexico & \\
+USA &\\
+&\\
+\multicolumn{2}{c}{} \\
+\textsc{2018} &\multirow{4}{=}{Devamanyu Hazarika, Sruthi Gorantla, Soujanya Poria, Roger Zimmermann. 
+\textbf{Self-Attentive Feature-level Fusion for Multimodal Emotion Detection}. \textit{ IEEE Conference on Multimedia Information Processing and Retrieval (MIPR) 2018}. See~\href{https://ieeexplore.ieee.org/document/8396999}{10.1109/MIPR.2018.00043}.}\\
+Miami & \\
+USA &\\
+&\\
+\multicolumn{2}{c}{} \\
+\textsc{2018} &\multirow{4}{=}{Devamanyu Hazarika, Rajiv Bajpai, Kunal Singh, Sruthi Gorantla, Erik Cambria, Roger Zimmermann. \textbf{Aspect-Sentiment Embeddings for Company Profiling and Employee Opinion Mining}. \textit{Proceedings of the 19\textsc{th} International Conference on Computational Linguistics and Intelligent Text Processing (CICLing) 2018}. See~\href{http://arxiv.org/abs/1902.08342}{arxiv.org/abs/1902.08342}.}\\
+Hanoi & \\
+Vietnam &\\
+&\\
+
+
+
+\end{tabularx}
+
+
+
+
+
+
+
+\begin{tabularx}{\textwidth}{r|X}
+\hline
+\multicolumn{2}{c}{}\\
+%Section: Work Experience at the top
+\multicolumn{2}{l}{\LARGE{\textsc{Work Experience}}}\\[2ex]
+ \textsc{Current} & \textbf{Research Assistant} at \textsc{CSA, Indian Institute of Science Bangalore} \\India&\emph{Subgroup Fairness in ML predictions, Learning in Neural Networks}\\
+ &\footnotesize{Algorithms and Optimization Lab} | Advisor: Dr. Anand Louis\\
+ \multicolumn{2}{c}{} \\
+ \textsc{Summer 2018} & \textbf{Summer Research Intern} at School \textit{of} Computing, \textsc{National University of Singapore} \\Singapore&\emph{Knowledge Aware Multilabel Disease Classification}\\
+ &\footnotesize{Clinical Data Analytics Lab} | Advisor: Dr. Vaibhav Rajan\\
+ \multicolumn{2}{c}{} \\
+\textsc{Summer 2016} & \textbf{Summer Analyst} at \textsc{Goldman Sachs Services Pvt. Ltd.}, Bangalore\\
+India& \emph{Automating the Workflow of Monetisability Checklist Review}\\
+&\footnotesize{Team: Balance Sheet Engineering, Technology division}\\
+\multicolumn{2}{c}{}\\
+\multicolumn{2}{c}{}\\
+\hline
+\multicolumn{2}{c}{} \\
+
+
+
+
+
+
+
+
+
+
+\multicolumn{2}{l}{\LARGE{\textsc{Talks and Presentations}}}\\[2ex]
+
+2019 & 
+\textbf{Biologically Plausible Neural Networks via Evolutionary Dynamics and Dopaminergic Plasiticity}, poster presentation at NeurIPS 2019 - Real Neurons and Hidden Units.\\[4ex]
+&\textbf{Capsule Networks and Biological Plausibility of Neural Networks on MNIST}, M. Tech. thesis presentation, IISc.\\[4ex]
+& \textbf{Study of Stable Recurrent Models}, Deep Learning Theory and Practice course, IISc.\\
+
+\multicolumn{2}{c}{} \\
+2018 & \textbf{Knowledge  Aware  Multilabel  Disease  Classification using  SemMedDB on MIMIC-III phenotyping dataset}, School of Computing Intern talk, NUS.\\[4ex]
+& \textbf{Creating Large Training Datasets with Weak Supervision}, Clinical Data Analytics, NUS.\\[2ex]
+& \textbf{Gaussian Processes for linear and logistic regression}, Machine Learning course, IISc.\\[2ex]
+& \textbf{Towards Universal Sentence Embeddings}, Natural Language Understanding course, IISc.\\[4ex]
+& \textbf{Distributed Computation of Embeddings for a Time Series Knowledge Graph}, Machine Learning with Large Datasets course, IISc.\\
+ \multicolumn{2}{c}{} \\
+ 
+2017 & \textbf{Study of Learned Word Representations across Languages and Tasks}, Deep Learning for NLP course, IISc. \\[4ex]
+& \textbf{A Polynomial Algorithm for the Secure Domination Number in Series-Parallel Graphs}, Final year project presentation, NITW.\\[4ex]
+&\textbf{Understanding Business Process Model and Notation for Process Automation}, Final Year Seminar, NITW.\\
+ \multicolumn{2}{c}{} \\
+  
+2016 & \textbf{Automating the Workflow of Monetisability Checklist Review}, 
+Summer Analyst talk series, Goldman Sachs.\\
+\end{tabularx}
+
+
+\begin{tabularx}{\textwidth}{XX}
+\multicolumn{2}{c}{}\\
+\hline
+\multicolumn{2}{c}{} \\
+\multicolumn{2}{l}{\LARGE{\textsc{Selected Coursework}}}\\[2ex]
+
+Spectral Algorithms & Natural Language Understanding\\
+Machine Learning & Deep Learning for Natural Language Processing\\
+Deep Learning Theory and Practice & Machine Learning with Large Datasets \\
+Linear Algebra and Applications & Program Analysis and Verification \\
+Design and Analysis of Algorithms & Game Theory\\
+\end{tabularx}
+\pagebreak
+\begin{tabularx}{\textwidth}{r|X}
+\hline
+\multicolumn{2}{c}{}\\
+\multicolumn{2}{l}{\LARGE{\textsc{Awards and Achievements}}}\\[2ex]
+2019 & Awarded \textbf{travel grant} by \textbf{MILA}, Canada, to present poster on my work at \textbf{NeurIPS 2019} in Vancouver, Canada.\\[4ex]
+& Selected for \textbf{NUS Research Scholarship} for PhD studies in the Department of Computer Science, School of Computing, NUS (declined by me).\\
+\multicolumn{2}{c}{}\\
+2017 & Secured \textbf{All India Rank 39} (top 0.04\%) in GATE CSIT 2017.\\[2ex]
+& Received \textbf{Institute Merit Scholarship} for high GPA, NITW.\\[2ex]
+2013 & Secured \textbf{All India Rank 3518} (top 0.25\%) in JEE Mains 2013. 
+
+\multicolumn{2}{c}{}\\
+\hline
+\multicolumn{2}{c}{} \\
+\multicolumn{2}{l}{\LARGE{\textsc{Positions of Responsibility}}}\\[2ex]
+2015 - 2017 & Member of Class Room Committee (CRC), Computer Science and Engineering, Class of 2017, NITW.\\[4ex]
+2016 & Event Manager for \textsc{Algolympics} -- an algorithms contest -- Technozion (annual tech-fest), NITW.\\
+
+\multicolumn{2}{c}{}\\
+\hline
+\multicolumn{2}{c}{} \\
+\multicolumn{2}{l}{\LARGE{\textsc{Professional Services}}}\\[2ex]
+2020 & Served as a reviewer for 22nd ACM International Conference on Multimodal Interaction, Utrecht, the Netherlands.\\
+\end{tabularx}
+
+\end{document}
